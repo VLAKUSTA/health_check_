@@ -19,15 +19,25 @@ class FinalWin(QWidget):
     
     def initUI(self):
        ''' створює графічні елементи '''
-       # TODO self.index_text = створити напис
-       # TODO self.result_text = створити напис
+       self.index_text = QLabel(txt_index)
+       self.result_text = QLabel(txt_finalwin)
 
-        # TODO свтворити вертикальний лайоут і додати на нього створенні віджети
+       self.layout = QVBoxLayout()
+       
+       self.layout.addWidget(self.index_text)
+       self.layout.addWidget(self.result_text)
+       self.setLayout(self.layout)
        
 
     def set_appear(self):
         ''' встановлює, як виглядатиме вікно (напис, розмір, місце) '''
         self.setWindowTitle(txt_title)
+        self.setGeometry(win_x, win_y, win_width, win_height)
+        
         # TODO вствановити розмір вікна в pyqt
         # TODO вствановити місце де вікно зявлятиметься в pyqt
+
+
+
+
 
