@@ -37,7 +37,7 @@ class TestWin(QWidget):
         self.bust3 = QPushButton(txt_starttest3)
         self.rez_2 = QLineEdit(txt_hinttest2)
         self.rez_3 = QLineEdit(txt_hinttest3)
-        
+        self.fbu = QPushButton(txt_sendresults)
         
         self.linev1 = QVBoxLayout()
         
@@ -64,7 +64,7 @@ class TestWin(QWidget):
         
         self.lineh = QHBoxLayout()
         
-        self.fbu = QPushButton(txt_sendresults)
+        
         
         self.lineh.addLayout(self.linev1)
         
@@ -73,8 +73,6 @@ class TestWin(QWidget):
         
         self.setLayout(self.lineh)
         
-app = QApplication([])
-mw = TestWin()
-app.exec_()
+
     
 

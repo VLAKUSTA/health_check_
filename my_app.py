@@ -8,8 +8,7 @@ from PyQt5.QtWidgets import (
 from instr import *
 from second_win import *
 
-
-        
+     
        
 class MainWin(QWidget):
     def __init__(self):
@@ -19,12 +18,15 @@ class MainWin(QWidget):
         self.initUI()
         self.set_appear()
         self.show()
+    
+    
 
     def initUI(self):
         ''' створює графічні елементи '''
         self.hello_text = QLabel(txt_hello)
         self.instruction = QLabel(txt_instruction)
         self.button = QPushButton(txt_next)
+        
         self.layout = QVBoxLayout()
 
         self.layout.addWidget(self.hello_text)
@@ -32,8 +34,8 @@ class MainWin(QWidget):
         self.layout.addWidget(self.button)
         self.setLayout(self.layout)
         
-        # TODO добавить виджет self.instruction на self.layout
-        # TODO добавить виджет self.button на self.layout
+        
+        
         
         
 

@@ -38,6 +38,3 @@ class FinalWin(QWidget):
         # TODO вствановити місце де вікно зявлятиметься в pyqt
 
 
-
-
-
