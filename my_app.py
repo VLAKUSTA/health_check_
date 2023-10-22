@@ -19,7 +19,9 @@ class MainWin(QWidget):
         self.set_appear()
         self.show()
     
-    
+    def on_click(self):
+        self.hide()
+        self.tw = TestWin()
 
     def initUI(self):
         ''' створює графічні елементи '''
@@ -34,14 +36,15 @@ class MainWin(QWidget):
         self.layout.addWidget(self.button)
         self.setLayout(self.layout)
         
+        self.button.clicked.connect(self.on_click)
         
         
-        
-        
+    
 
     def set_appear(self):
         ''' встановлює, як виглядатиме вікно (напис, розмір, місце) '''
         self.setWindowTitle(txt_title)
+        
         self.setGeometry(win_x, win_y, win_width, win_height)
         
         # TODO вствановити розмір вікна в pyqt
